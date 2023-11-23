@@ -1,0 +1,20 @@
+<app-search></app-search>
+<app-not-found
+[visible]="!items || !items.length"
+resetLinkText="Try Again"
+></app-not-found>
+<ul>
+  <li *ngFor="let item of items">
+    <a routerLink="/item/{{item.id}}">
+      <img src="{{item.imageUrl}}" alt="IMG NOT FOUND">
+      <div class="content">
+        <div class="itemName">
+          <span>{{item.name}}</span>
+        </div>
+        <div class="itemPrice">
+          <span>{{item.price|currency}}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

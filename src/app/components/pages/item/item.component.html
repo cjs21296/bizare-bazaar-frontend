@@ -1,0 +1,27 @@
+<app-not-found
+[visible]="!item"
+notFoundMessage="Item Not Found"
+resetLinkText="Back to Homepage"
+></app-not-found>
+
+<div *ngIf="item" class="container">
+    <img [src]="item.imageUrl" [alt]="item.name"/>
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{item.name}}
+            </span>
+        </div>
+        <div class="price">
+            <span>
+                {{item.price|currency}}
+            </span>
+        </div>
+        <div class="qty">
+            <span>Number of Items: </span>
+            <input type="number" min="1" [defaultValue]="1" [(ngModel)]="addNumber">
+        </div>
+        
+        <button (click)="addToCart()">Add to Cart</button>
+    </div>
+</div>

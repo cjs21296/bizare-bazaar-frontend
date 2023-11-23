@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="content">
+        <div class="orders" *ngFor="let order of orders">
+            <a routerLink="/track/{{order.id}}">
+                <app-order-track-page [order]="order"></app-order-track-page>
+            </a>
+        </div>
+    </div>
+</div>

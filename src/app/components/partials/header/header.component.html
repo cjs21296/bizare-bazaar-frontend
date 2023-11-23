@@ -1,0 +1,27 @@
+<header>
+    <div class="container">
+        <a href="#" routerLink="/" class="logo">Bizare Bazaar</a>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <!-- <a (click)="logout()">TestLogout</a>
+                    <a (click)="testUser()">TestUser</a> -->
+                    <a *ngIf="!user.token" routerLink="/login">Login</a>
+                </li>
+                <li *ngIf="user.token" class="menu-container">
+                    <a routerLink="/user">{{user.name}}</a>
+                    <div class="menu">
+                        <a routerLink="/dashboard">Dashboard</a>
+                        <a routerLink="/orders">Orders</a>
+                        <a (click)="logout()">Logout</a>
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="/cart-page">
+                        Cart <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

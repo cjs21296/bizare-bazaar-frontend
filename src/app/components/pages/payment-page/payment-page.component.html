@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="content">
+        <app-title title="Order Summary" fontSize="1.6rem"></app-title>
+        <div class="summary">
+            <div>
+                <h3>Name:</h3>
+                <span>{{order.name}}</span>
+            </div>
+            <div>
+                <h3>Address:</h3>
+                <span>{{order.address}}</span>
+            </div>
+        </div>
+        <order-item-list [order]="order"></order-item-list>
+    </div>
+
+    <form [formGroup]="paymentForm" (ngSubmit)="submit()">
+        <div class="cardinfo">
+            <text-input
+            label="Credit Card Number"
+            type="text"
+            [control]="fc.cardNumber"
+            [showErrorsWhen]="isSubmitted"></text-input>
+            
+            <div class="smallGroup">
+                <text-input
+                label="Month"
+                type="text"
+                [control]="fc.month"
+                [showErrorsWhen]="isSubmitted"></text-input>
+    
+    
+                <text-input
+                label="Year"
+                type="text"
+                [control]="fc.year"
+                [showErrorsWhen]="isSubmitted"></text-input>
+    
+                <text-input
+                class="cvv"
+                label="CVV"
+                type="text"
+                [control]="fc.cvv"
+                [showErrorsWhen]="isSubmitted"></text-input>
+            </div>
+        </div>
+    
+        <div class="buttons-container">
+            <div class="buttons">
+                <default-button text="Submit Payment"></default-button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+a{
+    text-decoration: none;
+}
+.content{
+    border-bottom: 1px solid white;
+}
+
+.orders{
+    border-bottom: 1px solid white;
+    margin-bottom: 1rem;
+}
+.orders:last-child{
+    border: none
+}
+.orders a{
+    text-decoration: none;
+    overflow: hidden;
+    color: #87CEEB;
+}

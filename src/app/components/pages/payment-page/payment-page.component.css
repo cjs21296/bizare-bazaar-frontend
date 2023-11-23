@@ -1,0 +1,71 @@
+.container{
+    margin-top: 1rem;
+    display: flex;
+    margin: 0 2rem 6rem 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content{
+    color: #87CEEB;
+    width: 35rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary > div{
+    display: flex;
+    margin-top: .7rem;
+}
+
+.summary span{
+    font-size: 1.2rem;
+}
+
+.summary h3{
+    margin: 0 1rem 0 0;
+    flex-basis: 5rem;
+}
+
+.buttons-container{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    margin-right: 3rem;
+    width: 35rem;
+}
+
+button{
+    color: white;
+    background: #87CEEB;
+    width: 100%;
+    height: 3rem;
+    opacity: .8;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+button:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.cardinfo{
+    width: 35rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.smallGroup{
+    width:100%;
+    display:inline;
+    padding: 0;
+    align-content: center;
+    justify-content: space-between;
+}
